@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>Tech Reviews</title>
@@ -9,7 +10,7 @@
 
     </head>
     <body>
-        <div class='jumbotron' style="background-color: Navy; color: white;">
+    <div class='jumbotron' style="background-color: Navy; color: white;">
             <h1>Tech Reviews</h1>
         </div>
         <nav class="navbar navbar-default">
@@ -18,7 +19,8 @@
                 <a class="navbar-brand" href="{% url 'index' %}">Tech Reviews</a>
                 </div>
                 <ul class="nav navbar-nav">
-
+                    <li><a href="{% url 'newresource' %}">Add Resource</a></li>
+                    <li><a href="{% url 'getresource' %}">See Resource</a></li>
 
                 </ul>
                 </div>
@@ -28,5 +30,8 @@
         {% block content %}
         {% endblock content %}
         </div>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+
     </body>
 </html>
