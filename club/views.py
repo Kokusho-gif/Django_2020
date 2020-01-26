@@ -40,17 +40,17 @@ def newMeeting(request):
     return render(request, 'club/meeting.html', {'form': form})
 
 
-@login_required
+# @login_required
 def getResource(request):
     resources_list=Resource.objects.all()
     return render(request, 'club/resourcelist.html', {'resources_list': resources_list})
 
-@login_required
+# @login_required
 def getMeeting(request):
     meeting_list=Meeting.objects.all()
     return render(request, 'club/meetinglist.html', {'meeting_list': meeting_list})
 
-@login_required
+# @login_required
 def meetingdetails(request, id):
     meet=get_object_or_404(Meeting, pk=id)
     meetingdate=meet.meetingdate
